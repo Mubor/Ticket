@@ -1,7 +1,6 @@
 import { resolve } from "node:path";
 import { readdir, writeFile, readFile, stat } from "node:fs/promises";
 import * as dayjs from "dayjs";
-
 import { Appointment } from "../../domain/appointment";
 import { File, State } from "../../ports/file";
 

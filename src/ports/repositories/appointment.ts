@@ -10,5 +10,6 @@ export interface AppointmentRepository {
 	findOne(id: AppointmentId): Promise<Appointment | undefined>;
 	findMany(filter: FindManyFilter): Promise<Appointment[]>;
 	update(appointment: Appointment): Promise<Appointment>;
+	clear(): Promise<void>;
 	remove(id: AppointmentId): Promise<void>;
 }
