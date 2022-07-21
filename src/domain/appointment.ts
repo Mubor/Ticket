@@ -52,7 +52,9 @@ export class Appointment {
 		return `AP-${now.getHours()}/${now.getMinutes()}/${now.getSeconds()}/${now.getMilliseconds()}`;
 	}
 
-	update(partial: Partial<AppointmentRecord>): void {
+	updateRecord(partial: Partial<AppointmentRecord>): void {
+		this.record.updated_at = new Date().toISOString();
 		this.record = {...this.record, ...partial }
 	}
+
 }

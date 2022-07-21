@@ -38,7 +38,7 @@ export class NodeCLI implements CLI {
 	}
 
 	private parseQueryParams<T>(query: string): T {
-		const queryList = query.split("&");
+		const queryList = query.split(",");
 
 		return queryList.reduce((params, current) => {
 			const [queryKey, queryValue] = current.split("=");
